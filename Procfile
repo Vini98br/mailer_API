@@ -1,1 +1,1 @@
-web: yarn start
+web: ENV_SILENT=true npm start
