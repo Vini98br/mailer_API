@@ -6,3 +6,5 @@ coverage
 .env
 .env.production
 tmp
+package-lock.json
+yarn.lock
