@@ -25,7 +25,7 @@ export default class MailController {
       to,
       from,
       subject
-    } = request.post<BodyType>();
+    } = request.post() as BodyType;
     try {
       if (!Object.keys(emailTypeMap).includes(template)) {
         response.status(400).send({
