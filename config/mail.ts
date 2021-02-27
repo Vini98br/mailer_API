@@ -46,13 +46,9 @@ const mailConfig: MailConfig = {
       driver: 'smtp',
       host: Env.get('SMTP_HOST'),
       port: Env.get('SMTP_PORT'),
-      // host: "smtp.mailtrap.io",
-      // port:2525,
 			auth: {
 				user: Env.get('SMTP_USERNAME'),
 				pass: Env.get('SMTP_PASSWORD'),
-        // user: "ec990577c5467e",
-				// pass: "2990601ddbd3b5",
         type: 'login'
       }
     },
