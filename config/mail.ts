@@ -58,7 +58,7 @@ const mailConfig: MailConfig = {
     // }
     mailgun: {
       driver: 'mailgun',
-      baseUrl: 'https://api.mailgun.net/v3/sandboxe48344346a3a4935b99fa95683b1cb3c.mailgun.org',
+      baseUrl: 'https://api.mailgun.net/v3/sandboxcbc31a9eb4aa4401901ee39dcb1dc2b3.mailgun.org',
       key: Env.get('MAILGUN_API_KEY') as string,
     },
 
