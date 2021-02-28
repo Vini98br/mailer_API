@@ -18,7 +18,7 @@ const mailConfig: MailConfig = {
   | a mailer
   |
   */
-  mailer: 'smtp',
+  mailer: 'mailgun',
 
   /*
   |--------------------------------------------------------------------------
@@ -42,20 +42,25 @@ const mailConfig: MailConfig = {
     | Uses SMTP protocol for sending email
     |
     */
-    smtp: {
-      driver: 'smtp',
-      host: Env.get('SMTP_HOST'),
-      port: Env.get('SMTP_PORT'),
-      secure: true,
-      tls: {
-        rejectUnauthorized: false
-      },
-			auth: {
-				user: Env.get('SMTP_USERNAME'),
-				pass: Env.get('SMTP_PASSWORD'),
-        type: 'login'
-      }
-    }
+    // smtp: {
+    //   driver: 'smtp',
+    //   host: Env.get('SMTP_HOST'),
+    //   port: Env.get('SMTP_PORT'),
+    //   secure: true,
+    //   tls: {
+    //     rejectUnauthorized: false
+    //   },
+		// 	auth: {
+		// 		user: Env.get('SMTP_USERNAME'),
+		// 		pass: Env.get('SMTP_PASSWORD'),
+    //     type: 'login'
+    //   }
+    // }
+    mailgun: {
+      driver: 'mailgun',
+      baseUrl: 'https://api.mailgun.net/v3/sandboxe48344346a3a4935b99fa95683b1cb3c.mailgun.org',
+      key: Env.get('MAILGUN_API_KEY') as string,
+    },
 
     /*
     |--------------------------------------------------------------------------
