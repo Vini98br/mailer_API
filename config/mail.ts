@@ -51,7 +51,7 @@ const mailConfig: MailConfig = {
 				pass: Env.get('SMTP_PASSWORD'),
         type: 'login'
       }
-    },
+    }
 
     /*
     |--------------------------------------------------------------------------
@@ -66,16 +66,6 @@ const mailConfig: MailConfig = {
     | ```
     |
     */
-    ses: {
-      driver: 'ses',
-      apiVersion: '2010-12-01',
-      key: Env.get('SES_ACCESS_KEY'),
-      secret: Env.get('SES_ACCESS_SECRET'),
-      region: Env.get('SES_REGION'),
-      sslEnabled: true,
-      sendingRate: 10,
-      maxConnections: 5,
-    },
 
   },
 }
